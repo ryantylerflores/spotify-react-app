@@ -34,11 +34,12 @@ class Playlist extends Component {
                   playlist.tracks.items.map((song, index) => {
                     let minutes = Math.floor((song.track.duration_ms / 1000) / 60).toString();
                     let seconds = Math.floor((song.track.duration_ms / 1000) % 60).toString();
+
                     if(seconds.length === 1) {
                       seconds = "0" + seconds.toString();
                     }
+                    
                     let audioPreview = song.track.preview_url;
-                    console.log(minutes, seconds);
                     return (
                       <Cards key={index} audioPreview={audioPreview}>
                         {({play}) => (
