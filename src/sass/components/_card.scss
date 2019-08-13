@@ -1,0 +1,157 @@
+.card {
+  position: relative;
+
+  &__container{
+    &--home {
+      display: flex;
+      width: 30rem;
+      height: 16rem;
+      transition: all .4s !important;
+
+      &:hover {
+        transform: scale(1.08);
+        box-shadow: 0rem 1rem 2rem rgba($color-white, .4);
+      }
+
+      &:active {
+        transform: scale(1);
+        box-shadow: 0 .5rem 1rem rgba($color-white, .4);
+      }
+    }
+
+    &--playlists {
+      position: relative;
+      display: flex;
+      width: 20rem;
+      height: 20rem;
+      cursor: pointer;
+      transition: all .4s !important;
+
+      &:hover {
+        transform: scale(1.04);
+        box-shadow: 0 1rem 2rem rgba($color-black, .4);
+      }
+
+      &:active {
+        transform: scale(1);
+        box-shadow: 0 .5rem .5rem rgba($color-black, .4);
+      }
+    }
+
+    &--songs {
+      position: relative;
+      display: flex;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  &__details-box--home {
+    display: flex;
+    flex-direction: column;
+    width: 18.5rem;
+  }
+
+  &__content--home {
+    width: 15rem;
+  }
+
+  &__album-cover {
+    &--home { width: 15rem }
+    &--playlists { width: 20rem }
+    &--songs { 
+      width: 20rem;
+      z-index: 11;
+
+      &:hover {
+        z-index: 1;
+      }
+
+      &:active {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__control--home {
+    padding-top: 2rem;
+    padding-left: 5.5rem;
+  }
+
+  &__control--song {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20rem;
+    width: 20rem;
+    background: rgba($color-black, .6);
+    z-index: 10;
+    &:hover{
+      z-index: 100;
+    }
+  }
+
+  
+
+  &__play-container {
+    height: 100%;
+    width: 100%;
+    padding: 7.3rem;
+  }
+
+
+
+  &__play-icon {
+    &--home {
+      height: 3.8rem;
+      width: 3.8rem;
+    }
+
+    &--playlist {
+      display: inline-block;
+      color: $color-white;
+      margin-right: 1rem;
+      transition: all .2s !important;
+      cursor: pointer;
+    }
+
+    &--song {
+      display: inline-block;
+      height: 5rem !important;
+      width: 5rem !important;
+      color: $color-white;
+      transition: all .4s !important;
+  
+      &:hover {
+        // color: rgba($color-white, .7);
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+  
+      &:active {
+        transform: scale(.9) ;
+      }
+    }
+  }
+
+  
+
+  &__text-box {
+    &--playlists {
+      width: 20rem;
+      margin-top: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &--song {
+      width: 20rem;
+      margin-top: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+}

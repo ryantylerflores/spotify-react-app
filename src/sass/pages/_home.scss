@@ -1,0 +1,21 @@
+.home {
+  margin-top: 6.4rem;
+  height: 100vh;
+  background-image: linear-gradient(90deg, #C074B2, #8AB5E8);
+
+  &--darken {
+    background: linear-gradient(transparent, #000);
+  }
+  
+  &__container {
+    height: 100%;
+  }
+
+  &__text-box {
+    padding: 2rem 8.3rem;
+  }
+
+  &__grid-container {
+
+  }
+}

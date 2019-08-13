@@ -1,0 +1,18 @@
+.songs {
+  @include pagePositioning;
+  @include darkenPageBackground;
+  background-image: linear-gradient(90deg, #3C8CE7, #00EAFF);
+  
+  &__container {
+
+  }
+
+  &__text-box {
+    padding: 2rem 8.3rem;
+  }
+
+  &__grid-container {
+
+  }
+
+}

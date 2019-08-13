@@ -1,0 +1,11 @@
+@mixin pagePositioning {
+  margin-top: 6.4rem;
+  height: 100vh;
+}
+
+@mixin darkenPageBackground {
+  &--darken {
+    background: linear-gradient(transparent, #000);
+    height: 100%;
+  }
+}
