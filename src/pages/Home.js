@@ -17,7 +17,8 @@ class Home extends Component {
     this.token = window.location.hash.substr(1).split('&')[0].split("=")[1];
 
     if(!this.token){
-      window.location.href = ('https://accounts.spotify.com/authorize?client_id=a170ad2c4056402e81316196ede04fb2&scope=playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20user-read-recently-played%20playlist-modify-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-read%20user-library-modify%20user-read-private%20user-read-email%20user-top-read%20user-read-playback-state&redirect_uri=http://localhost:3000&response_type=token&show_dialog=true');
+      // window.location.href = ('https://accounts.spotify.com/authorize?client_id=a170ad2c4056402e81316196ede04fb2&scope=playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20user-read-recently-played%20playlist-modify-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-read%20user-library-modify%20user-read-private%20user-read-email%20user-top-read%20user-read-playback-state&redirect_uri=http://localhost:3000&response_type=token&show_dialog=true');
+      window.location.href = ('https://accounts.spotify.com/authorize?client_id=a170ad2c4056402e81316196ede04fb2&scope=playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20user-read-recently-played%20playlist-modify-private%20ugc-image-upload%20user-follow-modify%20user-follow-read%20user-library-read%20user-library-modify%20user-read-private%20user-read-email%20user-top-read%20user-read-playback-state&redirect_uri=https://www.spotify-react-app.netlify.com&response_type=token&show_dialog=true');
     } else {
       this.props.spotifyCallback(this.token);
       this.props.setToken(this.token);
